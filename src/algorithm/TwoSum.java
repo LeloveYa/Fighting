@@ -17,10 +17,21 @@ return [0, 1].  */
 public class TwoSum {
 	public static void main(String[]args){
 	 int numbers[]={3,2,4};
-     twoSum(numbers, 6);
+     String result=twoSum(numbers, 6).toString();
+   System.out.println(result);
 	}
+	static String toString(int[] arr)
+    {
+        String str = "";
 
-  /* static int[] twoSum(int[] nums, int target) {
+        for (int i = 0; i < arr.length; i++)
+        {
+            str += arr[i];
+        }
+
+        return str;
+    }
+  static int[] twoSum(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
         	for(int j=i+1;j<nums.length;j++){
         		if(nums[j]==target-nums[i]){
@@ -30,8 +41,8 @@ public class TwoSum {
 			
 		}
         throw new IllegalArgumentException("No two sum solution");
-    }*/
-	static int[] twoSum(int[] numbers, int target) {
+    }
+	/*static int[] twoSum(int[] numbers, int target) {
 	    int[] result = new int[2];
 	    Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 	    for (int i = 0; i < numbers.length; i++) {
@@ -43,5 +54,5 @@ public class TwoSum {
 	        map.put(numbers[i], i + 1);
 	    }
 	    return result;
-	}
+	}*/
 }
