@@ -18,10 +18,13 @@ Method int[] absDif(int[] arr1, int[] arr2) returns a new array that is the abso
 public class Array{
 	public static void main(String[] args){
 		int arr[]={1,2,3};
-		int rev[]=reserve(arr);
-		for(int i=0;i<rev.length;i++){
-			System.out.print(""+rev[i]);
-		}
+		//int rev[]=reserve(arr);
+		//for(int i=0;i<rev.length;i++){
+		//	System.out.print(""+rev[i]);
+		//}
+		Array.replaceAll(arr, 1, 5);
+			System.out.println(Array.tostring(arr));
+	
 	}
 	static int sum(int[] arr){
 		int sum=0;
@@ -52,5 +55,12 @@ public class Array{
 			arr[arr.length-i-1]=temp;
 		}
 		return arr;
+	}
+	static void replaceAll(int[] arr, int old, int nw){
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]==old){
+				arr[i]=nw;
+			}
+		}
 	}
 }
