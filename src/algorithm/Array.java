@@ -17,14 +17,15 @@ Method int[] absDif(int[] arr1, int[] arr2) returns a new array that is the abso
  */
 public class Array{
 	public static void main(String[] args){
-		int arr[]={1,2,3};
+		int arr[]={3,1,5,4};
 		//int rev[]=reserve(arr);
 		//for(int i=0;i<rev.length;i++){
 		//	System.out.print(""+rev[i]);
 		//}
-		Array.replaceAll(arr, 1, 5);
+		//Array.replaceAll(arr, 1, 5);
+			//System.out.println(Array.tostring(arr));
+			Array.sort(arr);
 			System.out.println(Array.tostring(arr));
-	
 	}
 	static int sum(int[] arr){
 		int sum=0;
@@ -62,5 +63,38 @@ public class Array{
 				arr[i]=nw;
 			}
 		}
+	}
+	static int[] sort(int[] arr){
+		int length=arr.length;
+		int [] newArr=arr;
+		for(int i=0;i<length;i++){
+			for(int j=0;j<length-1;j++){
+				int temp=0;
+				if(newArr[i]>newArr[j]){
+					temp=newArr[i];
+					newArr[i]=newArr[j];
+					newArr[j]=temp;
+					
+				}
+			}
+		}
+		return newArr;
+	}
+	static boolean hasSubsequence(int[] arr, int[] sub){
+		if(sub.length > arr.length){
+			System.out.println("The sub-array is longer than the original array. Try a different sub-array!");
+		}
+		else{
+			for(int i = 0; i < arr.length; i++) {
+				if(arr[i] == sub[0]) {
+					for(int j = 0; j < sub.length; j++) {
+						if(arr[i+j] != sub[j]) {
+							return false;
+						}
+					}
+				}
+			}
+		}
+		return true;
 	}
 }
