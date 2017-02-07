@@ -1,12 +1,5 @@
 package algorithm;
 
-import java.nio.channels.spi.AbstractInterruptibleChannel;
-import java.util.Scanner;
-import java.util.concurrent.ThreadPoolExecutor.DiscardOldestPolicy;
-
-import javax.print.attribute.standard.RequestingUserName;
-import javax.swing.DefaultFocusManager;
-
 // 兔子算法 每个月兔子的对数而不是总数
 public class lianxi1{
 	/*public static void main(String[] args){
@@ -197,4 +190,85 @@ public class lianxi1{
 		System.out.println(s);
 		System.out.println(h/2);
 } */
+	//1 2 3 4 能组成多少个互相不相同且没有重复的三位数字
+	/*public static void main(String[]args){
+		int count=0;
+		for(int x=1;x<5;x++){
+			for (int y=1;y<5;y++){
+				for (int z=1;z<5;z++){
+					if(x!=y&&y!=z&&z!=x){
+						count++;
+						System.out.println(x*100+y*10+z);
+						
+					}
+				}
+			}
+		}
+		System.out.println(count);
+	}*/
+	//一个数加上100后是一个完全平方数后加上168还是一个完全平方数
+/*	public static void main(String[] args){
+		for (int x=1;x<1000000000;x++){
+			if(Math.sqrt(x+100)%1==0){
+				if(Math.sqrt(x+268)%1==0){
+					System.out.println(x);
+				}
+			}
+		}
+	}*/
+	//99乘法口诀
+	/*public static void main(String[]args){
+		int x,y;
+	
+		for(x = 0;x <= 9; x++)  {  
+		            for(y = 1;y <= x; y++)  {  
+			                System.out.print(y+"*"+x+"="+x*y+"\t");  
+			            }  
+			            System.out.println();  
+	   }
+	}
+*/
+	//猴子吃桃问题
+	/*public static void main(String[]args){
+		int x=1;
+		for(int i=2;i<=10;i++){
+			x=(x+1)*2;
+		}
+		System.out.println(x);
+	}*/
+	// 菱形
+	/*public static void main(String[] args){
+		for(int i=1;i<7;i=i+2){
+			for(int j=0;j<7-i/2;j++){
+				System.out.print(" ");
+			}
+			for(int j=0;j<i;j++){
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		for(int i=7;i>0; i=i-2){
+			for(int j=0;j<7-i/2;j++){
+				System.out.print(" ");
+			}
+			for(int j=0;j<i;j++){
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		}*/
+	//2/1,3/2,5/3...
+/*public static void main(String[] args){
+	int x=2,y=1,t;
+	double sum=0;
+	for(int i=1;i<20;i++){
+		sum=sum+(double)x/y;
+		t=y;
+		y=x;
+		x=y+t;
+	}
+	System.out.println(sum);
+}*/
+	
 }
